@@ -1,2 +1,2 @@
 # Roshambo
-Rock, Paper, Scissors iOS app
+Rock, Paper, Scissors iOS app for Udacity UIKit Fundamentals
