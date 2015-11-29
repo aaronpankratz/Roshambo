@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5314DCD1C0B649800BDFE33 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5314DCC1C0B649800BDFE33 /* HistoryViewController.swift */; };
+		D5314DCF1C0B665A00BDFE33 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5314DCE1C0B665A00BDFE33 /* Match.swift */; };
 		D57CAC8F1BF906BC00A4D67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CAC8E1BF906BC00A4D67C /* AppDelegate.swift */; };
 		D57CAC911BF906BC00A4D67C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CAC901BF906BC00A4D67C /* MatchViewController.swift */; };
 		D57CAC941BF906BC00A4D67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57CAC921BF906BC00A4D67C /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D5314DCC1C0B649800BDFE33 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D5314DCE1C0B665A00BDFE33 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		D57CAC8B1BF906BC00A4D67C /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57CAC8E1BF906BC00A4D67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57CAC901BF906BC00A4D67C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				D57CAC8E1BF906BC00A4D67C /* AppDelegate.swift */,
 				D57CAC901BF906BC00A4D67C /* MatchViewController.swift */,
 				D57CACBC1BF9077000A4D67C /* ResultsViewController.swift */,
+				D5314DCE1C0B665A00BDFE33 /* Match.swift */,
+				D5314DCC1C0B649800BDFE33 /* HistoryViewController.swift */,
 				D57CACBE1BF90C6500A4D67C /* Move.swift */,
 				D57CAC921BF906BC00A4D67C /* Main.storyboard */,
 				D57CAC951BF906BC00A4D67C /* Assets.xcassets */,
@@ -265,7 +271,9 @@
 				D57CAC911BF906BC00A4D67C /* MatchViewController.swift in Sources */,
 				D57CACBF1BF90C6500A4D67C /* Move.swift in Sources */,
 				D57CAC8F1BF906BC00A4D67C /* AppDelegate.swift in Sources */,
+				D5314DCD1C0B649800BDFE33 /* HistoryViewController.swift in Sources */,
 				D57CACBD1BF9077000A4D67C /* ResultsViewController.swift in Sources */,
+				D5314DCF1C0B665A00BDFE33 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +500,7 @@
 				D57CACB51BF906BC00A4D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D57CACB61BF906BC00A4D67C /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				D57CACB81BF906BC00A4D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D57CACB91BF906BC00A4D67C /* Build configuration list for PBXNativeTarget "RoshamboUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +518,7 @@
 				D57CACBB1BF906BC00A4D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

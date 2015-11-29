@@ -9,6 +9,8 @@
 import UIKit
 
 class MatchViewController: UIViewController {
+    
+    @IBOutlet weak var historyButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +28,19 @@ class MatchViewController: UIViewController {
         || segueIdentifier == "paper"
         || segueIdentifier == "scissors" {
             let controller = segue.destinationViewController as! ResultsViewController
+            var playerOneMove: Move
             switch segueIdentifier {
             case "rock":
-                controller.yourMove = Move.Rock
+                playerOneMove = Move.Rock
             case "paper":
-                controller.yourMove = Move.Paper
+                playerOneMove = Move.Paper
             case "scissors":
                 fallthrough
             default:
-                controller.yourMove = Move.Scissors
+                playerOneMove = Move.Scissors
             }
-            controller.opponentMove = Move.generateOpponentMove()
+            let playerTwoMove = Move.generateOpponentMove()
+            controller.match = Match(playerOneMove: playerOneMove, playerTwoMove: playerTwoMove)
         }
     }
 }

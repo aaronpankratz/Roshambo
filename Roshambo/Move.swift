@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Move {
     case Rock, Paper, Scissors
@@ -22,6 +23,19 @@ enum Move {
             fallthrough
         default:
             return Move.Scissors
+        }
+    }
+    
+    func setImage(imageView: UIImageView) -> Void {
+        switch self {
+        case .Rock:
+            imageView.image = UIImage(named: "rock")
+        case .Paper:
+            imageView.image = UIImage(named: "paper")
+        case .Scissors:
+            fallthrough
+        default:
+            imageView.image = UIImage(named: "scissors")
         }
     }
 }
