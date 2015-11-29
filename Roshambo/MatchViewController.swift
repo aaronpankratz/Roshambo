@@ -11,6 +11,7 @@ import UIKit
 class MatchViewController: UIViewController {
     
     @IBOutlet weak var historyButton: UIBarButtonItem!
+    var history = [Match]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,9 @@ class MatchViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let segueIdentifier = segue.identifier!
-        if segueIdentifier == "rock"
-        || segueIdentifier == "paper"
-        || segueIdentifier == "scissors" {
+        if (segueIdentifier == "rock"
+            || segueIdentifier == "paper"
+            || segueIdentifier == "scissors") {
             let controller = segue.destinationViewController as! ResultsViewController
             var playerOneMove: Move
             switch segueIdentifier {
@@ -40,7 +41,13 @@ class MatchViewController: UIViewController {
                 playerOneMove = Move.Scissors
             }
             let playerTwoMove = Move.generateOpponentMove()
-            controller.match = Match(playerOneMove: playerOneMove, playerTwoMove: playerTwoMove)
+            let match = Match(playerOneMove: playerOneMove, playerTwoMove: playerTwoMove)
+            controller.match = match
+            self.history.append(match)
+        }
+        else if segueIdentifier == "history" {
+            let controller = segue.destinationViewController as! HistoryViewController
+            controller.history = self.history
         }
     }
 }

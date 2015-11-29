@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 
 class HistoryViewController: UIViewController {
-    
+    var history = [Match]()
+
 }
