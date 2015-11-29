@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
-enum Move {
-    case Rock, Paper, Scissors
+enum Move: String {
+    case Rock = "Rock"
+    case Paper = "Paper"
+    case Scissors = "Scissors"
     
     static func generateOpponentMove() -> Move {
         let randomInt = arc4random() % 3

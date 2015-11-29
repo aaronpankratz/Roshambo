@@ -47,7 +47,8 @@ class MatchViewController: UIViewController {
         }
         else if segueIdentifier == "history" {
             let controller = segue.destinationViewController as! HistoryViewController
-            controller.history = self.history
+            let tableViewDataSource = HistoryTableViewDataSource(history: self.history)
+            controller.tableViewDataSource = tableViewDataSource
         }
     }
 }

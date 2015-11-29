@@ -6,10 +6,15 @@
 //  Copyright © 2015 Aaron Pankratz. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class HistoryViewController: UIViewController {
-    var history = [Match]()
+    var tableViewDataSource: HistoryTableViewDataSource?
 
+    @IBOutlet weak var tableView: UITableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.dataSource = self.tableViewDataSource
+    }
 }

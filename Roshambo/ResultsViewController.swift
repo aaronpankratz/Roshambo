@@ -15,6 +15,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var yourMoveImage: UIImageView!
     @IBOutlet weak var oponnentMoveImage: UIImageView!
     @IBOutlet weak var resultImage: UIImageView!
+    @IBOutlet weak var playerOneResult: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class ResultsViewController: UIViewController {
         match?.playerOneMove.setImage(yourMoveImage)
         match?.playerTwoMove.setImage(oponnentMoveImage)
         match!.setImage(resultImage)
+        self.playerOneResult.text = match?.playerOneResult
     }
     
     override func didReceiveMemoryWarning() {

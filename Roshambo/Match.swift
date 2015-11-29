@@ -12,40 +12,50 @@ import UIKit
 struct Match {
     var playerOneMove: Move;
     var playerTwoMove: Move;
-    var result: String;
+    var resultImageName: String;
+    var matchDetail: String;
+    var playerOneResult: String;
     
     init(playerOneMove: Move, playerTwoMove: Move) {
         self.playerOneMove = playerOneMove
         self.playerTwoMove = playerTwoMove
+        self.matchDetail = "\(playerOneMove) vs \(playerTwoMove)"
+        
+        // determine the result image and if player one won|lost|tied
         if ((playerOneMove == Move.Rock && playerTwoMove == Move.Rock)
             || (playerOneMove == Move.Paper && playerTwoMove == Move.Paper)
             || (playerOneMove == Move.Scissors && playerTwoMove == Move.Scissors)) {
-                self.result = "itsATie"
+                self.resultImageName = "itsATie"
+                self.playerOneResult = "Tie"
         }
         
         // rock and paper
         else if ((playerOneMove == Move.Rock && playerTwoMove == Move.Paper)
             || (playerOneMove == Move.Paper && playerTwoMove == Move.Rock)) {
-                self.result = "PaperCoversRock"
+                self.resultImageName = "PaperCoversRock"
+                self.playerOneResult = playerOneMove == Move.Paper ? "Win" : "Loss"
         }
         
         // rock and scissors
         else if ((playerOneMove == Move.Rock && playerTwoMove == Move.Scissors)
             || (playerOneMove == Move.Scissors && playerTwoMove == Move.Rock)) {
-                self.result = "RockCrushesScissors"
+                self.resultImageName = "RockCrushesScissors"
+                self.playerOneResult = playerOneMove == Move.Rock ? "Win" : "Loss"
         }
         
         // scissors and paper
         else if ((playerOneMove == Move.Scissors && playerTwoMove == Move.Paper)
             || (playerOneMove == Move.Paper && playerTwoMove == Move.Scissors)) {
-                self.result = "ScissorsCutPaper"
+                self.resultImageName = "ScissorsCutPaper"
+                self.playerOneResult = playerOneMove == Move.Scissors ? "Win" : "Loss"
         }
         else {
-            self.result = "unknown"
+            self.resultImageName = "unknown"
+            self.playerOneResult = "unknown"
         }
     }
     
     func setImage(imageView: UIImageView) {
-        imageView.image = UIImage(named: self.result)
+        imageView.image = UIImage(named: self.resultImageName)
     }
 }
