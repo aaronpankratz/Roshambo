@@ -43,7 +43,7 @@ class MatchViewController: UIViewController {
             let playerTwoMove = Move.generateOpponentMove()
             let match = Match(playerOneMove: playerOneMove, playerTwoMove: playerTwoMove)
             controller.match = match
-            self.history.append(match)
+            self.history.insert(match, atIndex: 0)
         }
         else if segueIdentifier == "history" {
             let controller = segue.destinationViewController as! HistoryViewController

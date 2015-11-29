@@ -27,7 +27,7 @@
                                 </constraints>
                                 <state key="normal" image="paper"/>
                                 <connections>
-                                    <segue destination="Bl7-Yp-Yj0" kind="presentation" identifier="paper" id="Roa-EK-sng"/>
+                                    <segue destination="Bl7-Yp-Yj0" kind="show" identifier="paper" id="Roa-EK-sng"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krf-Gm-h3k" userLabel="scissors">
@@ -39,7 +39,7 @@
                                 </constraints>
                                 <state key="normal" image="scissors"/>
                                 <connections>
-                                    <segue destination="Bl7-Yp-Yj0" kind="presentation" identifier="scissors" id="SvY-de-aNE"/>
+                                    <segue destination="Bl7-Yp-Yj0" kind="show" identifier="scissors" id="SvY-de-aNE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2A-ut-P0A" userLabel="rock">
@@ -51,7 +51,7 @@
                                 </constraints>
                                 <state key="normal" image="rock"/>
                                 <connections>
-                                    <segue destination="Bl7-Yp-Yj0" kind="presentation" identifier="rock" id="8qR-a9-pK5"/>
+                                    <segue destination="Bl7-Yp-Yj0" kind="show" identifier="rock" id="8qR-a9-pK5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -273,6 +273,6 @@
         <image name="scissors" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Roa-EK-sng"/>
+        <segue reference="8qR-a9-pK5"/>
     </inferredMetricsTieBreakers>
 </document>

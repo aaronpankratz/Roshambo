@@ -32,6 +32,8 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func playAgain(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewControllerAnimated(true)
+        }
     }
 }
